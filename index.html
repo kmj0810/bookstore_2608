@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오페이지</title>
+    
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+                <div id="header">
+                    <div class="logo">kakaopage</div>
+                    <div class="rigth">
+                        <ul>
+                            <li>홈</li>
+                            <li>웹툰</li>
+                            <li>웹소설</li>
+                            <li>책</li>
+                        </ul>
+                    </div>
+                </div>
+        </header>
+
+        <!-- category -->
+        <category>
+
+        </category>
+
+        
+        <div id="slider">
+             <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+
+        <!-- section1 -->
+        <section1>
+
+        </section1>
+
+        <!-- section2 -->
+        <section2>
+
+        </section2>
+
+
+        <!-- section3 -->
+        <section3>
+            
+        </section3>
+
+
+        <!-- section4 -->
+        <section4>
+            
+        </section4>
+
+   
+
+    
+
+        <!-- footer -->
+        <footer>
+            <div id="container">
+                <div class="footer_top">
+                    <div class="left">
+                        <ul>
+                            <li><a href="">고객</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+
+                </div>
+            </div>
+        </footer>
+
+          <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.mySwiper', {});
+
+            var swiper = new Swiper('.mySwiper', {
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+        </script>
+    </div>
+</body>
+</html>

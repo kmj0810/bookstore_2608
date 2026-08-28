@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+
+body {
+html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #000;
+        font-family:
+          Helvetica Neue,
+          Helvetica,
+          Arial,
+          sans-serif;
+        font-size: 14px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+}
+
+
+
+.container {
+    width: 980px;
+    height: 340px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+/* header */
+header {
+        width: 1200px; height: 120px; margin: 0 auto; }
+
+#header .logo {
+    width: 110px; height: 24px; float: left; background-color: #999;
+}
+#header .right {
+    width: 250px; height: 35px; float: right; background-color: red;
+}
+#header .right ul li{float: left;}
+
+
+
+/* category */
+category { 
+    width: 980px; height: 40px; margin: 0 auto; background-color: pink;
+}
+
+
+
+/* section */
+section1 {
+    width: 980px; height: 260px; margin: 0 auto; background-color: blue;
+}
+
+section2 {
+    width: 980px; height: 340px; margin: 0 auto; background-color: brown;
+}
+
+section3 {
+    width: 980px; height: 340px; margin: 0 auto; background-color: orange;
+}
+
+section4 {
+    width: 980px; height: 115px; margin: 0 auto; background-color: red;
+}
+
+
+/* footer */
+footer {
+    width: 980px; height: 155px; margin: 0 auto; background-color: green;
+}
+
+#footer_top {
+    height: 190px; background-color: skyblue;
+}
+#footer_top .left { 
+    width: 60%; height: 100%; display: flex; justify-content: space-between; background-color: aquamarine;
+}
+#footer_top .left ul{
+    width: 20%; height: 100%; background-color: purple;
+}
+#footer_top .right { 
+    width: 35%; height: 100%; background-color: tomato;
+}
+#footer_top .right .icon {
+    width: 45px; height: 45px; border: 1px solid #ddd; border-radius: 50%; 
+}
+
+#footer_bottom {
+    height:  calc(100% - 190px); background-color: orange;
+}
+
+#swiper {
+    width: 980px; height: 260px; background-color: blue;
+}
