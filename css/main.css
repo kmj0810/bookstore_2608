@@ -1,2 +1,65 @@
 @charset "utf-8";
 
+.notice {
+    padding-bottom: 8px
+}
+
+.notice__inner {
+    width: 960px;
+    height: 30px;
+    margin: auto;
+    border-radius: 6px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    padding: 0 7px
+}
+
+.notice__content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    font-weight: 700
+}
+
+.notice__badge {
+    width: 19px;
+    height: 19px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    background: #ff3d9a;
+    display: grid;
+    place-items: center
+}
+
+.notice__arrow {
+    margin-left: auto;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    font-size: 13px
+}
+
+#slider {
+    width: 960px;
+    height: 340px;
+    margin: 0 auto;
+}
+
+#slider .swiper-wrapper-slide {
+    width: 29%;
+    height: 100%;
+}
+
+
+#slider2 {
+    width: 960px; height: 220px; margin: 0 auto;
+}
+
+#slider2 .swiper-slide {
+    width: 10%;
+}
+

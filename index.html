@@ -1,48 +1,192 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오페이지</title>
-    
+
     <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
 
-    
+
 </head>
+
 <body>
     <div id="wrap">
         <!-- header -->
-        <header>
-                <div id="header">
-                    <div class="logo">kakaopage</div>
-                    <div class="rigth">
-                        <ul>
-                            <li>홈</li>
-                            <li>웹툰</li>
-                            <li>웹소설</li>
-                            <li>책</li>
-                        </ul>
-                    </div>
+        <header class="header">
+            <div class="header__inner">
+
+                <div class="header__logo">
+                    <button type="button">kakao page</button>
                 </div>
+
+                <nav class="header__nav" aria-label="주 메뉴">
+                    <button class="header__nav-button" type="button">추천</button>
+                    <button class="header__nav-button" type="button">웹툰</button>
+                    <button class="header__nav-button" type="button">웹소설</button>
+                    <button class="header__nav-button is-active" type="button">책</button>
+                    <button class="header__nav-button" type="button">요일연재</button>
+                </nav>
+
+                <div class="header__actions">
+                    <button class="header__search" type="button">
+                        <span>제목, 작가를 입력하세요.</span>
+                        <span class="header__search-icon">⌕</span>
+                    </button>
+
+                    <button class="header__action-button" type="button" aria-label="보관함">보관함</button>
+                    <button class="header__action-button" type="button" aria-label="선물">선물</button>
+                    <button class="header__action-button" type="button" aria-label="마이페이지">마이페이지</button>
+                </div>
+
+            </div>
         </header>
 
         <!-- category -->
-        <category>
+        <nav class="category" aria-label="책 메뉴">
+            <div class="category__inner">
+                <button class="category__button category__button--active" type="button">⚡ 지금핫한</button>
+                <button class="category__button" type="button">랭킹</button>
+                <button class="category__button" type="button">분류전체</button>
+            </div>
+        </nav>
 
-        </category>
+        <section class="notice">
+            <div class="notice__inner">
+                <button class="notice__content" type="button">
+                    <span class="notice__badge">9</span>
+                    <span>9월 캐시 상자 열기</span>
+                </button>
+                <button class="notice__arrow" type="button" aria-label="공지 자세히 보기">→</button>
+            </div>
+        </section>
+
+        <div id="slider">
+            <!-- Swiper -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Resize me!</div>
+                    <div class="swiper-slide">Resize me!</div>
+                    <div class="swiper-slide">Resize me!</div>
+                    <div class="swiper-slide">Resize me!</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+
+
+        <!-- section1 -->
+        <section class="featured">
+            <div class="content-width">
+                <div class="featured__grid">
+        
+                    <button class="featured-card" type="button">
+                        <span class="featured-card__image"></span>
+                        <strong>콘텐츠 제목 01</strong>
+                        <small>작가명</small>
+                    </button>
+        
+                    <button class="featured-card" type="button">
+                        <span class="featured-card__image"></span>
+                        <strong>콘텐츠 제목 02</strong>
+                        <small>작가명</small>
+                    </button>
+        
+                    <button class="featured-card" type="button">
+                        <span class="featured-card__image"></span>
+                        <strong>콘텐츠 제목 03</strong>
+                        <small>작가명</small>
+                    </button>
+        
+                    <button class="featured-card" type="button">
+                        <span class="featured-card__image"></span>
+                        <strong>콘텐츠 제목 04</strong>
+                        <small>작가명</small>
+                    </button>
+        
+                    <button class="featured-card" type="button">
+                        <span class="featured-card__image"></span>
+                        <strong>콘텐츠 제목 05</strong>
+                        <small>작가명</small>
+                    </button>
+        
+                    <button class="featured-card featured-card--best" type="button">
+                        <span class="featured-card__image"></span>
+                        <strong>지금 많이 보는<br>베스트셀러</strong>
+                        <small>주간 TOP</small>
+                    </button>
+        
+                </div>
+            </div>
+        </section>
 
         
-        <div id="slider">
-             <!-- Swiper -->
-            <div class="swiper mySwiper">
+    
+
+        <!-- section2 -->
+        <section class="book-section">
+            <div class="content-width">
+                <div class="section-title">
+                    <h2>기대 신작 TOP</h2>
+                </div>
+        
+                <div class="book-grid">
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            01</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            02</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            03</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            04</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            05</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            06</strong><small>작가명</small></button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section3 -->
+        <section class="book-section">
+            <div class="content-width">
+                <div class="section-title">
+                    <h2>8월 월간 베스트</h2>
+                </div>
+        
+                <div class="book-grid">
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            01</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            02</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            03</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            04</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            05</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            06</strong><small>작가명</small></button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div id="slider2">
+            <h3>밀리언 페이지</h3>
+            <!-- Swiper -->
+            <div class="swiper s1Swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">Slide 1</div>
                     <div class="swiper-slide">Slide 2</div>
@@ -56,77 +200,108 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
-        </div>
-
-
-        <!-- section1 -->
-        <section1>
-
-        </section1>
-
-        <!-- section2 -->
-        <section2>
-
-        </section2>
-
-
-        <!-- section3 -->
-        <section3>
-            
-        </section3>
-
+        </slider>
 
         <!-- section4 -->
-        <section4>
-            
-        </section4>
+        <section class="book-section steady-section">
+            <div class="content-width">
+                <div class="section-title">
+                    <h2>명작 스테디셀러!</h2>
+                </div>
+        
+                <div class="book-grid">
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            01</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            02</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            03</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            04</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            05</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            06</strong><small>작가명</small></button>
+                </div>
+                <div class="book-grid">
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            01</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            02</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            03</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            04</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            05</strong><small>작가명</small></button>
+                    <button class="book-card" type="button"><span class="book-card__cover"></span><strong>책 제목
+                            06</strong><small>작가명</small></button>
+                </div>
 
-   
 
-    
+        <section class="app-banner">
+            <div class="app-banner__inner">
+                <strong>세상의 모든 이야기, 카카오페이지 앱에서 다양한 무료 선물을 받아보세요</strong>
+                <div class="app-banner__stores">
+                    <button type="button">Google Play</button>
+                    <button type="button">App Store</button>
+                </div>
+                <span class="app-banner__icon">K</span>
+            </div>
+        </section>
+
+
+
 
         <!-- footer -->
-        <footer>
-            <div id="container">
-                <div class="footer_top">
-                    <div class="left">
-                        <ul>
-                            <li><a href="">고객</a></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="right">
-                        <div class="icon"></div>
-                        <div class="icon"></div>
-                        <div class="icon"></div>
-                        <div class="icon"></div>
-                    </div>
+        <footer class="footer">
+            <div class="content-width">
+                <nav class="footer__nav">
+                    <button type="button">회사 소개</button>
+                    <button type="button">이용약관</button>
+                    <button type="button">개인정보처리방침</button>
+                    <button type="button">청소년보호정책</button>
+                    <button type="button">고객센터</button>
+                    <button type="button">공지사항</button>
+                </nav>
+        
+                <div class="footer__info">
+                    <p>사업자 정보 영역</p>
+                    <p>사업자등록번호 / 통신판매업 신고번호</p>
+                    <p>대표전화 / 이메일 / 주소</p>
                 </div>
-                <div class="footer_bottom">
-
-                </div>
+        
+                <small>© Kakao Entertainment Corp.</small>
             </div>
         </footer>
 
-          <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
-
-        <!-- Initialize Swiper -->
-        <script>
-            var swiper = new Swiper('.mySwiper', {});
-
-            var swiper = new Swiper('.mySwiper', {
-                navigation: {
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            direction: getDirection(),
+            navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            },
+            on: {
+                resize: function () {
+                    swiper.changeDirection(getDirection());
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
-        </script>
+            },
+        });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
+    </script>
     </div>
 </body>
+
 </html>
