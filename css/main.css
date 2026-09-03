@@ -1,31 +1,31 @@
 @charset "utf-8";
 
 .notice {
-    padding-bottom: 8px
+    padding-bottom: 14px;
 }
 
 .notice__inner {
-    width: 960px;
-    height: 30px;
+    width: 1200px;
+    height: 42px;
     margin: auto;
-    border-radius: 6px;
+    border-radius: 8px;
     background: #f1f1f1;
     display: flex;
     align-items: center;
-    padding: 0 7px
+    padding: 0 12px;
 }
 
 .notice__content {
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 9px;
-    font-weight: 700
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .notice__badge {
-    width: 19px;
-    height: 19px;
+    width: 25px;
+    height: 25px;
     border: 2px solid #111;
     border-radius: 50%;
     background: #ff3d9a;
@@ -35,48 +35,61 @@
 
 .notice__arrow {
     margin-left: auto;
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background: #111;
     color: #fff;
-    font-size: 13px
+    font-size: 13px;
 }
 
 #slider {
-    width: 960px;
-    height: 340px;
-    margin: 0 auto;
+    width: 1200px;
+    height: 360px;
+    margin: 20px auto;
 }
 
 
 .slider2 {
-    width: 960px; height: 220px; margin: 0 auto;
+    width: 1200px;
+    height: 360px;
+    margin: 0 auto;
 }
 
-.slider2 .swiper-slide{
-    width: 98px; height: 140px; 
-}
-/* 
 .slider2 .swiper-slide {
-    width: 98px;
-    height: auto;
-    display: block;
+    width: 140px;
+    height: 300px;
     text-align: left;
-    background: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slider2 h3 {
+    font-size: 20px;
+    margin-bottom: 18px
 }
 
 .slider2 .swiper-slide img {
     display: block;
-    width: 98px;
-    height: 140px;
+    width: 140px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 8px;
+}
+
+.slider2 .swiper-slide h6 {
+    align-items: flex-start;
+    width: 140px;
+    text-align: left;
+    margin: 10px 0 0;
+    font-size: 14px
 }
 
 .slider2 .swiper-slide p {
+    width: 140px;
+    height: auto;
     margin: 6px 0 0;
-    font-size: 8px;
-    line-height: 1.35;
-    color: #111;
-    text-align: left;
-} */
+    font-size: 12px;
+}
