@@ -10,7 +10,7 @@ async function fetchBooks(query) {
     const response = await fetch(url, {
         method: 'GET',
         headers: {
-        Authorization: `KakaoAK ${REST_API_KEY}`
+            Authorization: `KakaoAK ${REST_API_KEY}`
         }
     });
 
@@ -21,26 +21,33 @@ async function fetchBooks(query) {
     return response.json();
 }
 
-async function swiperbookData() {
+
+async function featuredData() {
     try {
         // query와 section ID를 매핑
         const queries = [
-            { query: "소설", sectionId: "slider" },
+            { query: "베스트셀러", sectionclass: "featured" },
         ];
 
-        for (const { query, sectionId } of queries) {
+        for (const { query, sectionclass } of queries) {
             const data = await fetchBooks(query);
 
-            // 해당 섹션 내의 .box 요소 8개 선택
-            const section = document.querySelector(`.${sectionId}`);
-            const boxElements = section.querySelectorAll("#$swiper-slide");
+            //썸네일이 빈 문자열인것은 제외
+            const origin = data.documents;
+            let book = origin.filter((val) => {
+                return val.thumbnail != '' && val.contents != '' && val.authors != '';
+            })
 
-            boxElements.forEach((div, i) => {
-                const doc = data.documents[i];
+            // 해당 섹션 내의 .box 요소 8개 선택
+            const section = document.querySelector(`.${sectionclass}`);
+            const boxElements = section.querySelectorAll(".featured-card");
+
+            boxElements.forEach((box, i) => {
+                const doc = book[i];
                 if (!doc) return;
 
                 // 요소 생성 및 추가
-                div.innerHTML = `<img src="${doc.thumbnail}" alt="${doc.title}">
+                box.innerHTML = `<img class="featured-card__image" src="${doc.thumbnail}" alt="${doc.title}">
                         <h6>${doc.title}</h6>
                         <p>${doc.authors}</p>
                         `
@@ -51,7 +58,8 @@ async function swiperbookData() {
     }
 }
 
-swiperbookData();
+featuredData();
+
 
 async function swiperbookData() {
     try {
@@ -97,11 +105,11 @@ async function bookData() {
 
         for (const { query, sectionclass } of queries) {
             const data = await fetchBooks(query);
-            
+
             //썸네일이 빈 문자열인것은 제외
             const origin = data.documents;
-            let book = origin.filter((val)=>{
-                return val.thumbnail != '' && val.contents !='' && val.authors !='';
+            let book = origin.filter((val) => {
+                return val.thumbnail != '' && val.contents != '' && val.authors != '';
             })
 
             // 해당 섹션 내의 .box 요소 8개 선택
@@ -125,3 +133,4 @@ async function bookData() {
 }
 
 bookData();
+
